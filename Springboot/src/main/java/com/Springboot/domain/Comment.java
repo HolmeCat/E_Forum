@@ -12,7 +12,7 @@ public class Comment {
     @Column(nullable = false)
     private String context; //评测内容
     @Column(nullable = false)
-    private String score; //评分
+    private Integer score; //评分
     @Column(nullable = false)
     private Date date; //日期
     @JoinColumn(name = "productId")
@@ -33,10 +33,10 @@ public class Comment {
     public String getContext() {
         return context;
     }
-    public void setScore(String score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
-    public String getScore() {
+    public Integer getScore() {
         return score;
     }
     public void setDate(Date date) {
